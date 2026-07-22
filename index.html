@@ -1,93 +1,352 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Ing. Aldo Josue Gallardo Vera</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f4f4f9;
-        }
+    <meta name="description" content="Sitio web profesional de Ing. Aldo Josue Gallardo Vera - Ingeniero en Sistemas Computacionales & Analista TIC.">
+    <meta name="author" content="Ing. Aldo Josue Gallardo Vera">
+    <title>Ing. Aldo Josue Gallardo Vera | Portafolio Profesional</title>
 
-        header {
-            text-align: center;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 0;
-            object-fit: cover;
-            border: 3px solid #4CAF50;
-        }
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        section {
-            background: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #4CAF50;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-
-        .contact-info {
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Background Decorator -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-grid-pattern"></div>
 
-    <header>
-        <img src="img/foto.jpeg" alt="Foto de Josue Gallardo" style="width: 200px; border-radius: 0%;">
-        <h1>Ing. Aldo Josue Gallardo Vera</h1>
-        <p>Ingeniero en Sistemas Computacionales</p>
-        <div class="contact-info">
-            <p>📍 Simón Bolívar - Guayas - Ecuador | 📱 0959878185</p>
-            <p>📧 josuegallardovera@gmail.com</p>
+    <!-- Navigation Header -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-code">&lt;</span>
+                <span class="logo-text">Aldo Gallardo</span>
+                <span class="logo-code">/&gt;</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="#perfil" class="nav-link"><i class="fa-solid fa-user"></i> Perfil</a>
+                <a href="#experiencia" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+                <a href="#educacion" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Educación</a>
+                <a href="#habilidades" class="nav-link"><i class="fa-solid fa-microchip"></i> Habilidades</a>
+                <a href="#contacto" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" title="Cambiar tema">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="menu-toggle-btn" id="menu-toggle" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <section>
-        <h2>Perfil Profesional</h2>
-        <p>Ingeniero en Sistemas con sólida experiencia como Analista TIC.</p>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="pulse-dot"></span>
+                        <span>Analista TIC & Ingeniero en Sistemas</span>
+                    </div>
 
-    <section>
-        <h2>Experiencia Laboral</h2>
-        <ul>
-            <li><strong>Analista de Tecnologías de la Información y Comunicación</strong> - GAD Municipal Cantón Simón
-                Bolívar (2023 - Presente)</li>
-        </ul>
-    </section>
+                    <h1 class="hero-title">
+                        Ing. Aldo Josue <br>
+                        <span class="gradient-text">Gallardo Vera</span>
+                    </h1>
 
-    <section>
-        <h2>Educación y Capacitación</h2>
-        <p><strong>Ingeniería en Sistemas Computacionales</strong> - Universidad Estatal de Milagro (UNEMI).</p>
+                    <div class="typing-container">
+                        <span class="typing-prefix">Especialista en </span>
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
 
-    </section>
+                    <p class="hero-description">
+                        Profesional apasionado por la transformación digital, optimización de infraestructura de redes y gestión eficiente de sistemas tecnológicos en el sector público y privado.
+                    </p>
+
+                    <div class="hero-tags">
+                        <span class="tag-item"><i class="fa-solid fa-location-dot"></i> Simón Bolívar - Guayas, Ecuador</span>
+                        <span class="tag-item"><i class="fa-solid fa-building-columns"></i> UNEMI</span>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/593959878185?text=Hola%20Ing.%20Aldo%20Josue,%20he%20visto%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20contactarlo." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+                        </a>
+                        <button class="btn btn-secondary" id="copy-email-btn" data-email="josuegallardovera@gmail.com">
+                            <i class="fa-regular fa-copy"></i> <span id="copy-email-text">Copiar Email</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="image-card-frame">
+                        <div class="glow-ring"></div>
+                        <img src="img/foto.jpeg" alt="Foto de Ing. Aldo Josue Gallardo Vera" class="profile-photo">
+                        <div class="floating-badge badge-top">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <strong>Analista TIC</strong>
+                                <span>GAD Municipal</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-bottom">
+                            <i class="fa-solid fa-award"></i>
+                            <div>
+                                <strong>Ingeniería en Sistemas</strong>
+                                <span>UNEMI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfil Profesional Section -->
+        <section class="section perfil-section" id="perfil">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Conóceme</span>
+                    <h2 class="section-title">Perfil Profesional</h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="perfil-grid">
+                    <div class="perfil-card main-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3>Solidez y Experiencia Técnica</h3>
+                        <p>
+                            Ingeniero en Sistemas Computacionales con sólida experiencia como <strong>Analista TIC</strong>. Capacitado para liderar proyectos tecnológicos, gestionar infraestructura informática, brindar soporte técnico avanzado y garantizar la continuidad operativa de los sistemas corporativos y gubernamentales.
+                        </p>
+                        <div class="skills-chips">
+                            <span>Sistemas TIC</span>
+                            <span>Redes & Telecom</span>
+                            <span>Gestión Pública</span>
+                            <span>Soporte Técnico</span>
+                            <span>Bases de Datos</span>
+                        </div>
+                    </div>
+
+                    <div class="perfil-stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="stat-number">+2</div>
+                            <div class="stat-label">Años Experiencia TIC</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-user-shield"></i></div>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Compromiso y Ética</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="stat-number">Infra</div>
+                            <div class="stat-label">Gestión de Redes</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="stat-number">UNEMI</div>
+                            <div class="stat-label">Título Profesional</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia Laboral Section -->
+        <section class="section experiencia-section" id="experiencia">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Trayectoria</span>
+                    <h2 class="section-title">Experiencia Laboral</h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <span class="status-tag">2023 - Presente</span>
+                                    <h3 class="role-title">Analista de Tecnologías de la Información y Comunicación</h3>
+                                    <h4 class="company-name"><i class="fa-solid fa-building-flag"></i> GAD Municipal Cantón Simón Bolívar</h4>
+                                </div>
+                            </div>
+                            <p class="role-description">
+                                Responsable del análisis, administración, mantenimiento preventivo/correctivo y soporte integral de la plataforma informática e infraestructura tecnológica municipal.
+                            </p>
+                            <ul class="role-bullet-points">
+                                <li><i class="fa-solid fa-check-circle"></i> Gestión y mantenimiento de redes, conectividad e infraestructura de hardware y software.</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Soporte técnico especializado a usuarios institucionales y optimización de procesos TIC.</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Implementación y supervisión de políticas de seguridad informática y respaldo de datos.</li>
+                            </ul>
+                            <div class="role-tags">
+                                <span>Infraestructura TIC</span>
+                                <span>Soporte Municipal</span>
+                                <span>Redes LAN/WAN</span>
+                                <span>Administración de Sistemas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educación y Capacitación Section -->
+        <section class="section educacion-section" id="educacion">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Formación Académica</span>
+                    <h2 class="section-title">Educación y Capacitación</h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="education-grid">
+                    <div class="education-card glass-card">
+                        <div class="edu-badge"><i class="fa-solid fa-university"></i></div>
+                        <div class="edu-details">
+                            <span class="edu-year"><i class="fa-solid fa-award"></i> Título Profesional Tercer Nivel</span>
+                            <h3>Ingeniería en Sistemas Computacionales</h3>
+                            <p class="institution">Universidad Estatal de Milagro (UNEMI)</p>
+                            <p class="edu-description">
+                                Formación integral orientada al desarrollo de software, arquitectura de sistemas, gestión de proyectos de TI, redes de computadoras y seguridad informática.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades & Competencias Section -->
+        <section class="section habilidades-section" id="habilidades">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Especialidades</span>
+                    <h2 class="section-title">Habilidades & Competencias</h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category-card glass-card">
+                        <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                        <h3>Infraestructura & Redes</h3>
+                        <ul class="skill-list">
+                            <li><i class="fa-solid fa-angle-right"></i> Mantenimiento de Hardware y Equipos TIC</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Administración de Redes LAN / WAN</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Seguridad y Respaldos de Información</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Configuración de Servidores & Periféricos</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category-card glass-card">
+                        <div class="skill-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h3>Gestión & Soporte TIC</h3>
+                        <ul class="skill-list">
+                            <li><i class="fa-solid fa-angle-right"></i> Atención y Mesa de Ayuda a Usuarios</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Diagnóstico y Solución de Incidencias</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Gestión Tecnológica Municipal / Pública</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Optimización de Procesos Operativos</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category-card glass-card">
+                        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3>Desarrollo & Sistemas</h3>
+                        <ul class="skill-list">
+                            <li><i class="fa-solid fa-angle-right"></i> Ingeniería de Software & Lógica</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Bases de Datos & Gestión de Información</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Tecnologías Web (HTML, CSS, JavaScript)</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Implementación de Soluciones Digitales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section class="section contacto-section" id="contacto">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Conectemos</span>
+                    <h2 class="section-title">Información de Contacto</h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="contact-cards-container">
+                    <a href="https://wa.me/593959878185?text=Hola%20Ing.%20Aldo%20Josue,%20he%20visto%20su%20p%C3%A1gina%20web" target="_blank" rel="noopener noreferrer" class="contact-card glass-card">
+                        <div class="contact-icon whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Teléfono / WhatsApp</h3>
+                            <p>+593 959 878 185</p>
+                            <span class="contact-action">Enviar mensaje <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <div class="contact-card glass-card" id="contact-email-card">
+                        <div class="contact-icon email">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Correo Electrónico</h3>
+                            <p>josuegallardovera@gmail.com</p>
+                            <span class="contact-action" id="copy-email-action">Haz clic para copiar <i class="fa-solid fa-copy"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Ubicación</h3>
+                            <p>Simón Bolívar - Guayas</p>
+                            <span class="contact-country">Ecuador 🇪🇨</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Ing. Aldo Josue Gallardo Vera | Todos los derechos reservados.</p>
+            <p class="footer-subtext">Diseñado con <i class="fa-solid fa-heart gradient-text"></i> para la excelencia profesional.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification for Copying -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Correo copiado al portapapeles</span>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
 </body>
 
 </html>
